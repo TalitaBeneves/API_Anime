@@ -10,7 +10,7 @@ import { ApiAnimeService } from 'src/app/service/api-anime.service';
 })
 export class CardComponent implements OnInit {
   dados!: AnimeModel[];
-  tes!: string;
+
   constructor(private api: ApiAnimeService, private router: Router) {}
 
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class CardComponent implements OnInit {
   }
 
   chamandoApi() {
-    this.api.obterAnime(this.tes).subscribe({
+    this.api.obterAnime().subscribe({
       next: (res: any) => {
         this.dados = res.data;
         console.log(res.data);
@@ -29,11 +29,7 @@ export class CardComponent implements OnInit {
     });
   }
 
-  agoraVai(anime: AnimeModel) {
-    this.router.navigateByUrl('/detalhes', { state: anime });
-  }
-
-  obterndoAinimeId(idAnime: AnimeModel) {
+  obterndoAnimeId(idAnime: AnimeModel) {
     this.api.setAnime(idAnime);
     this.router.navigateByUrl('/detalhes');
   }

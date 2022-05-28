@@ -9,11 +9,11 @@ import { ApiAnimeService } from 'src/app/service/api-anime.service';
   styleUrls: ['./detalhes.component.css'],
 })
 export class DetalhesComponent implements OnInit {
-  vamoo: any;
+  detalhe: any;
 
   constructor(private api: ApiAnimeService) {}
 
   ngOnInit(): void {
-    this.vamoo = this.api.obterAnimeId();
+    this.detalhe = this.api.obterAnimeId();
   }
 }

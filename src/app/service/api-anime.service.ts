@@ -11,7 +11,7 @@ export class ApiAnimeService {
 
   constructor(private http: HttpClient) {}
 
-  obterAnime(url: string): any {
+  obterAnime(): any {
     return this.http.get<any>(this.Url);
   }
 

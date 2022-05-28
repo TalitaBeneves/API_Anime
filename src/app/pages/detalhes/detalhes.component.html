@@ -5,7 +5,7 @@
       style="width: 25rem"
     >
       <div class="row w-30">
-        <img [src]="vamoo?.attributes?.posterImage?.original" />
+        <img [src]="detalhe?.attributes?.posterImage?.original" />
       </div>
     </div>
   </mat-card>
@@ -13,34 +13,34 @@
   <div class="d-flex justify-content-center mt-5">
     <div class="card-body">
       <h3 class="card-title">
-        <b>Nome: {{ vamoo?.attributes?.canonicalTitle }}</b> <br />
-        <b>{{ vamoo?.attributes?.titles?.ja_jp }}</b>
+        <b>Nome: {{ detalhe?.attributes?.canonicalTitle }}</b> <br />
+        <b>{{ detalhe?.attributes?.titles?.ja_jp }}</b>
       </h3>
 
       <p class="card-text">
-        <b>Rank Popular: {{ vamoo?.attributes?.popularityRank }}°</b>
+        <b>Rank Popular: {{ detalhe?.attributes?.popularityRank }}°</b>
       </p>
       <p class="card-text">
-        <b>Eps: {{ vamoo?.attributes?.episodeCount }}</b>
+        <b>Eps: {{ detalhe?.attributes?.episodeCount }}</b>
       </p>
 
       <p class="card-text">
-        <b>Lançado: {{ vamoo?.attributes?.endDate | date: "dd/MM/yyyy" }}</b>
+        <b>Lançado: {{ detalhe?.attributes?.endDate | date: "dd/MM/yyyy" }}</b>
       </p>
       <p class="card-text">
-        <b>Final: {{ vamoo?.attributes?.createdAt | date: "dd/MM/yyyy" }}</b>
+        <b>Final: {{ detalhe?.attributes?.createdAt | date: "dd/MM/yyyy" }}</b>
       </p>
       <p class="card-text">
         <b
           >Atualização:
-          {{ vamoo?.attributes?.updatedAt | date: "dd/MM/yyyy" }}</b
+          {{ detalhe?.attributes?.updatedAt | date: "dd/MM/yyyy" }}</b
         >
       </p>
       <p class="card-text">
-        <b>Status: {{ vamoo?.attributes?.status }}</b>
+        <b>Status: {{ detalhe?.attributes?.status }}</b>
       </p>
       <p style="max-width: 600px">
-        <b>Descrição: {{ vamoo?.attributes?.description }}</b>
+        <b>Descrição: {{ detalhe?.attributes?.description }}</b>
       </p>
     </div>
   </div>
